@@ -37,7 +37,7 @@ Python · FastAPI · Qdrant · Sentence Transformers · BM25 · RRF · Cross-Enc
 Replace the placeholder URL with your GitHub repository URL.
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
+git clone https://github.com/alentp680/internal-docs-rag.git
 cd internal-docs-rag
 ```
 
