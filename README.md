@@ -17,7 +17,26 @@ A Retrieval-Augmented Generation (RAG) system that answers questions using infor
 
 ## Architecture
 
-Document Upload → Text Extraction and Chunking → Embeddings → Qdrant + BM25 → RRF → Cross-Encoder Reranking → Ollama LLM → Answer with Sources
+The system combines dense vector search and BM25 keyword search to retrieve relevant document passages, merges the results using Reciprocal Rank Fusion (RRF), and reranks them before generating an answer with Ollama.
+
+```mermaid
+flowchart TD
+    A["Document Upload<br/>PDF · DOCX · TXT"] --> B["Text Extraction"]
+    B --> C["Text Chunking"]
+    C --> D["Embedding Generation"]
+    D --> E[("Qdrant Vector Database")]
+    C --> F["BM25 Keyword Index"]
+
+    G["User Question"] --> H["Hybrid Retrieval"]
+    E --> H
+    F --> H
+
+    H --> I["Reciprocal Rank Fusion (RRF)"]
+    I --> J["Cross-Encoder Reranking"]
+    J --> K["Ollama · Qwen2.5 3B"]
+    K --> L["Answer with Source Information"]
+```
+
 
 ## Tech Stack
 
