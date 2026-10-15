@@ -1,0 +1,31 @@
+﻿# Python virtual environment
+.venv/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Python cache files
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Test and coverage output
+.coverage
+htmlcov/
+
+# Local document data
+data/raw/*
+!data/raw/.gitkeep
+
+# Editor and operating system files
+.vscode/
+.DS_Store
+Thumbs.db
+
+data/processed
+
+*.pyc
+
+tests/test_openai.py
