@@ -29,3 +29,5 @@ data/processed
 *.pyc
 
 tests/test_openai.py
+
+desktop.ini

@@ -113,6 +113,14 @@ Open the API documentation at http://127.0.0.1:8000/docs.
 | DELETE | `/documents/{filename}` | Delete a document |
 | POST | `/query` | Ask a question |
 
+## API Documentation
+
+The FastAPI Swagger UI provides interactive documentation for exploring and testing the available endpoints.
+
+![FastAPI API Documentation](api-docs.png)
+
+To view the API documentation locally, start the FastAPI server and open `http://127.0.0.1:8000/docs` in your browser.
+
 ## Current Status
 
 The hybrid retrieval and question-answering pipeline has been implemented and tested with sample documents.
